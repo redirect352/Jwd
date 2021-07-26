@@ -24,7 +24,7 @@ public class AirbusPlane extends  Plane{
     }
 
     @Override
-    public   String getPlaneName() {
+    public   String toString() {
         String planeName = "Airbus " + Integer.toString(planeModelNumber);
         return  planeName;
     }

@@ -24,7 +24,7 @@ public class BoeingPlane extends  Plane{
     }
 
     @Override
-    public   String getPlaneName() {
+    public   String toString() {
         String planeName = "Boeing " + Integer.toString(planeModelNumber);
         return  planeName;
     }

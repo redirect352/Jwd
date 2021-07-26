@@ -3,8 +3,9 @@ package com.epam.Task1.UserInterface;
 import com.epam.Task1.Aircrafts.AirbusPlane;
 import com.epam.Task1.Aircrafts.BoeingPlane;
 import com.epam.Task1.Aircrafts.EmbraerPlane;
-import com.epam.Task1.Aircrafts.Plane;
 import com.epam.Task1.Airline.Airline;
+import com.epam.Task1.Airline.AirlineLogic;
+
 import java.util.Scanner;
 
 public class Program {
@@ -15,7 +16,7 @@ public class Program {
         airline.addPlane(new BoeingPlane(8000, 5220, 8,747));
         airline.addPlane(new BoeingPlane(10000, 180, 7,767));
         airline.addPlane(new EmbraerPlane(6000, 250, 11,321));
-
+        AirlineLogic airlineLogic = new AirlineLogic(airline);
         Scanner in = new Scanner(System.in);
         int menuOption = -1;
 
@@ -24,23 +25,23 @@ public class Program {
             menuOption = in.nextInt();
             switch (menuOption){
                 case 1:
-                    airline.printPlanesList();
+                    airlineLogic.printPlanesList();
                     break;
                 case 2:
-                    airline.sortListByRange();
-                    airline.printPlanesList();
+                    airlineLogic.sortListByRange();
+                    airlineLogic.printPlanesList();
                     break;
                 case 3:
                     System.out.println("Input minimal fuel consumption: ");
                     int minConsumption = in.nextInt();
                     System.out.println("Input maximal fuel consumption: ");
                     int maxConsumption = in.nextInt();
-                    airline.findPlanesByFuelConsumption(minConsumption,maxConsumption);
+                    System.out.println(airlineLogic.findPlanesByFuelConsumption(minConsumption,maxConsumption));
                     break;
                 case 4:
                     System.out.println("Input distance: ");
                     int distance = in.nextInt();
-                    airline.findCheapestPlane(distance);
+                    System.out.println(airlineLogic.findCheapestPlane(distance));
                     break;
                 case 5:
                     System.out.println("Closing Program...");

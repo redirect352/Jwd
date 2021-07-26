@@ -28,8 +28,5 @@ public abstract class  Plane{
     protected abstract  int getFuelCost();
     protected  abstract  int getServiceCost();
 
-    public  abstract String getPlaneName();
-
-
 
 }
