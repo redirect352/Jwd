@@ -1,4 +1,4 @@
-package com.epam.Task1.Aircrafts;
+package com.epam.Task1.Aircraft;
 
 public abstract class  Plane{
 
@@ -14,11 +14,11 @@ public abstract class  Plane{
     public  int rangeOfFlight;
     public  int seatsNumber;
     public  int fuelConsumption;
-    public  int planeModelNumber = 0;
+    public  int planeModelNumber;
 
-    protected   int averageSpeed = 800;
+    protected   int averageSpeed;
 
-    public abstract int computeFligthCost(int distance, double taxesCoefficient );
+    public abstract int computeFlightCost(int distance, double taxesCoefficient );
 
     protected  int computeBaseCost(int distance,int passengerCount){
         int resultCost = distance/averageSpeed*fuelConsumption*getFuelCost()+ passengerCount*getServiceCost ();

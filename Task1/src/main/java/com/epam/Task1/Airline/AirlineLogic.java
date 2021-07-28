@@ -1,7 +1,7 @@
 package com.epam.Task1.Airline;
 
-import com.epam.Task1.Aircrafts.Plane;
-import com.epam.Task1.Aircrafts.PlaneComparator;
+import com.epam.Task1.Aircraft.Plane;
+import com.epam.Task1.Aircraft.PlaneComparator;
 
 import java.util.ArrayList;
 
@@ -82,8 +82,8 @@ public class AirlineLogic {
         int cheapestPrice = Integer.MAX_VALUE;
         for (Plane plane:
                 airlinePlanes) {
-            if (plane.computeFligthCost(distance,TAXES) < cheapestPrice){
-                cheapestPrice = plane.computeFligthCost(distance,TAXES);
+            if (plane.computeFlightCost(distance,TAXES) < cheapestPrice){
+                cheapestPrice = plane.computeFlightCost(distance,TAXES);
                 cheapestPlane = plane;
             }
         }

@@ -1,13 +1,11 @@
 package com.epam.Task1.Airline;
 
-import com.epam.Task1.Aircrafts.Plane;
-import com.epam.Task1.Aircrafts.PlaneComparator;
+import com.epam.Task1.Aircraft.Plane;
 
 import java.util.ArrayList;
 
 public class Airline {
     protected ArrayList<Plane> airlinePlanes;
-    private  final double TAXES= 0.23;
 
     public Airline(){
         airlinePlanes = new ArrayList<Plane>();

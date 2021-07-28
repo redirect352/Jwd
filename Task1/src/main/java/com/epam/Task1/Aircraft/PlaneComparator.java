@@ -1,4 +1,4 @@
-package com.epam.Task1.Aircrafts;
+package com.epam.Task1.Aircraft;
 
 import java.util.Comparator;
 

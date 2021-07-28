@@ -1,8 +1,8 @@
 package com.epam.Task1.UserInterface;
 
-import com.epam.Task1.Aircrafts.AirbusPlane;
-import com.epam.Task1.Aircrafts.BoeingPlane;
-import com.epam.Task1.Aircrafts.EmbraerPlane;
+import com.epam.Task1.Aircraft.AirbusPlane;
+import com.epam.Task1.Aircraft.BoeingPlane;
+import com.epam.Task1.Aircraft.EmbraerPlane;
 import com.epam.Task1.Airline.Airline;
 import com.epam.Task1.Airline.AirlineLogic;
 
