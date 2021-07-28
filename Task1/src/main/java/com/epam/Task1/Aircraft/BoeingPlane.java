@@ -1,5 +1,7 @@
 package com.epam.Task1.Aircraft;
 
+import java.util.Objects;
+
 public class BoeingPlane extends  Plane{
     private  final  int FUEL_COST_COEFFICIENT = 10;
     private  final  int SERVICE_COEFFICIENT = 3;
@@ -40,6 +42,24 @@ public class BoeingPlane extends  Plane{
         String planeName = PLANE_NAME + Integer.toString(planeModelNumber);
         return  planeName;
     }
-
+    @Override
+    public  int hashCode(){
+        return Objects.hashCode(this);
+    }
+    public  boolean equals(Object object){
+        if(object == this){
+            return  true;
+        }
+        if(object == null ||
+                !(object instanceof  BoeingPlane)){
+            return  false;
+        }
+        BoeingPlane boeingPlane = (BoeingPlane) object;
+        boolean result = this.planeModelNumber == boeingPlane.planeModelNumber &&
+                this.seatsNumber == boeingPlane.seatsNumber &&
+                this.liftingCapacity == boeingPlane.liftingCapacity &&
+                this.rangeOfFlight == boeingPlane.rangeOfFlight;
+        return  result;
+    }
 
 }
